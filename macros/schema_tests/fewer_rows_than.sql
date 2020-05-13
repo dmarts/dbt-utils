@@ -25,11 +25,11 @@ final as (
         case
             when count_model > count_comparison then count_model - count_comparison + 1
             when count_model = count_comparison then count_model - count_comparison
-        else 0 end as excess_count
+        else 0 end as excess_rows
     from counts
 
 )
 
-select excess_count from final
+select excess_rows from final
 
 {% endmacro %}
